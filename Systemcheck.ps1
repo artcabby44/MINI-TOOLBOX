@@ -1,6 +1,6 @@
 $i = 1
 Do {
-Write-Host "System checker`n 1.Computer Info `n 2.System Info`n 3.Check the licensed key expiration `n 4.Check the licensed key if retailed `n 5.Wipass `n 6.Debloater by Chris Titus `n 7.Debloater by Sycnex `n 8.exit"
+Write-Host "System checker`n 1.Computer Info `n 2.System Info`n 3.Check the licensed key expiration `n 4.Check the licensed key if retailed `n 5.Wipass `n 6.Debloater by Chris Titus `n 7.Debloater by Sycnex `n 8.Activate word`n 9.exit"
 $user_inp = Read-Host "Select a task"
 
 Switch ($user_inp)
@@ -21,7 +21,8 @@ netsh wlan show profile $wifi_name key = clear
    PowerShell -NoProfile -ExecutionPolicy Bypass -Command "& './Windows10DebloaterGUI.ps1'"
    cd ..
    }
-   8 {exit}
+   8 {.\Activator.cmd}
+   9 {exit}
 }
 
 }
