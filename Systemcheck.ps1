@@ -1,6 +1,6 @@
 $i = 1
 Do {
-Write-Host "System checker`n 1.Computer Info `n 2.System Info`n 3.Check the licensed key expiration `n 4.Check the licensed key if retailed `n 5.Wipass `n 6.Debloater by Chris Titus `n 7.Debloater by Sycnex `n 8.Activate word`n 9.exit"
+Write-Host "`n`n*****Windows Tweaker Flash Drive***** `n `n 1.Computer Info `n 2.System Info`n 3.Check the licensed key expiration `n 4.Check the licensed key if retailed `n 5.Wipass `n 6.Debloater by Chris Titus `n 7.Activate word`n 8.exit"
 $user_inp = Read-Host "Select a task"
 
 Switch ($user_inp)
@@ -13,16 +13,10 @@ Switch ($user_inp)
 $wifi_name = READ-HOST "ENTER YOUR WIFI SSID"
 netsh wlan show profile $wifi_name key = clear
    }
-   6 {cd Debloater_by_Chris_Titus_Tech
-   PowerShell -NoProfile -ExecutionPolicy Bypass -Command "& './win10debloat.ps1'"
-   cd ..
+   6 {iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/artcabby44/MINI-TOOLBOX/main/Systemcheck.ps1'))
    }
-   7 {cd Debloater_by_Sycnex
-   PowerShell -NoProfile -ExecutionPolicy Bypass -Command "& './Windows10DebloaterGUI.ps1'"
-   cd ..
-   }
-   8 {.\Activator.cmd}
-   9 {exit}
+   7 {.\Activator.cmd}
+   8 {exit}
 }
 
 }
