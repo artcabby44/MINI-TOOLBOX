@@ -13,7 +13,7 @@ Switch ($user_inp)
 $wifi_name = READ-HOST "ENTER YOUR WIFI SSID"
 netsh wlan show profile $wifi_name key = clear
    }
-   6 {iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/artcabby44/MINI-TOOLBOX/main/Systemcheck.ps1'))
+   6 {iex ((New-Object System.Net.WebClient).DownloadString('https://git.io/JJ8R4'))
    }
    7 {.\Activator.cmd}
    8 {exit}
