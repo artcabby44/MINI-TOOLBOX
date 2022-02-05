@@ -206,8 +206,8 @@ Function DisableCortana {
 
 $i = 1
 Do {
-Write-Host "`n`n*****Windows Tweaker Flash Drive***** `n `n Do you want to tweak your windows OS? This will remove unnecessary programs and remove some key registry to improve privacy and performance of your operating system. Enter (y) to continue and (x) to decline"
-$user_inp = Read-Host "Select a task"
+Write-Host "`n`n*****Windows Tweaker Flash Drive***** `n `n Do you want to tweak your windows OS? This will remove unnecessary programs and remove some key registry to improve privacy and `n performance of your operating system. Enter (y) to continue and (x) to decline"
+$user_inp = Read-Host "`n`n Do you want to continue?: "
 
 Switch ($user_inp)
 {
