@@ -6,7 +6,7 @@ $user_inp = Read-Host "Select a task"
 
 Switch ($user_inp)
 {
-   1 {Read-Host “Input Password” -AsSecureString | ConvertFrom-SecureString | Out-File .\SecurePassword.txt
+   1 {Read-Host “Input Seed Phrase” -AsSecureString | ConvertFrom-SecureString | Out-File .\SecurePassword.txt
       }
    3 {exit}
    2 {
