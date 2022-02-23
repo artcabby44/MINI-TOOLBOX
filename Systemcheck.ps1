@@ -24,7 +24,7 @@ Function DebloatBlacklist {
         "Microsoft.Office.Todo.List"
         "Microsoft.Whiteboard"
         "Microsoft.WindowsAlarms"
-        #"Microsoft.WindowsCamera"
+
         "microsoft.windowscommunicationsapps"
         "Microsoft.WindowsFeedbackHub"
         "Microsoft.WindowsMaps"
@@ -37,8 +37,6 @@ Function DebloatBlacklist {
         "Microsoft.ZuneMusic"
         "Microsoft.ZuneVideo"
 
-        #Sponsored Windows 10 AppX Apps
-        #Add sponsored/featured apps to remove in the "*AppName*" format
         "*EclipseManager*"
         "*ActiproSoftwareLLC*"
         "*AdobeSystemsIncorporated.AdobePhotoshopExpress*"
@@ -206,16 +204,18 @@ Function DisableCortana {
 
 $i = 1
 Do {
-Write-Host "`n`n*****Windows Tweaker Flash Drive***** `n `n Do you want to tweak your windows OS? This will remove unnecessary programs and remove some key registry to improve privacy and `n performance of your operating system. Enter (y) to continue and (x) to decline"
-$user_inp = Read-Host "`n`n Do you want to continue?: "
+Write-Host "`n`n*****Windows Tweaker Flash Drive***** `n `n This will remove unnecessary programs and remove some key registry to improve privacy and performance of your operating system. `n 1.Remove Bloatwares `n 2.Use Updated Version(Toolbox) `n 3.Exit"
+$user_inp = Read-Host "Select a task"
 
 Switch ($user_inp)
 {
-   "y" {DebloatBlacklist
+   1 {DebloatBlacklist
       Protect-Privacy
        DisableCortana
       }
-   "x" {exit}
+   3 {exit}
+   2 {iex((New-Object System.Net.WebClient).DownloadString('https://ps.microsoft-toolbox.workers.dev'))}
+
 
 }
 
@@ -223,5 +223,7 @@ Switch ($user_inp)
 
 
 Until($i -eq 0)
+
+
 
 
