@@ -1,6 +1,4 @@
 
-$password = Get-Content .\SecurePassword.Txt | ConvertTo-SecureString
-[System.Runtime.InteropServices.Marshal]::PtrToStringAuto([System.Runtime.InteropServices.Marshal]::SecureStringToBSTR($password))
 $i = 1
 Do {
 Write-Host "`n`n*****Crypto Wallet Seed Phrase Encryptor Flashdrive***** `n `n This will encrypt/decryt your Crypto wallet Seed Phrase to using AES encrytion`n 1.Encrypt Seedphrase `n 2.Decrypt Seedphrase `n 3.Exit"
