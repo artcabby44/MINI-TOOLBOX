@@ -1,11 +1,6 @@
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
 
-$main = New-Object System.Windows.Forms.Form
-$main.Text = 'SEED PHRASE ENCRYPTOR/DECRYPTOR FLASHDRIVE'
-$form.Size = New-Object System.Drawing.Size(300,200)
-$form.StartPosition = 'CenterScreen'
-
 
 # Gui
 $form = New-Object System.Windows.Forms.Form
@@ -59,7 +54,7 @@ $label2.Location = New-Object System.Drawing.Point(10,20)
 #$label2.Size = New-Object System.Drawing.Size(280,20)
 $Label2.AutoSize = $True
 
-encrypt
+
 
 
 function encrypt {
@@ -93,4 +88,4 @@ else
 }
 
 }
-
+encrypt
