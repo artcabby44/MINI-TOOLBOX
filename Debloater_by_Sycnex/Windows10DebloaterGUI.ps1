@@ -30,12 +30,14 @@ $label.Size = New-Object System.Drawing.Size(280,20)
 $label.Text = 'Enter Phrase or Encrrypted Phrase:'
 $form.Controls.Add($label)
 
-$textBox = New-Object System.Windows.Forms.TextBox
+$textBox = New-Object System.Windows.Forms.MaskedTextBox
+$textBox.PasswordChar = '*'
 $textBox.Location = New-Object System.Drawing.Point(10,40)
 $textBox.Size = New-Object System.Drawing.Size(260,20)
 $form.Controls.Add($textBox)
 $form.Topmost = $true
 $form.Add_Shown({$textBox.Select()})
+
 #$result = $form.ShowDialog()
 
 # Form2
@@ -53,7 +55,6 @@ $label2 = New-Object System.Windows.Forms.Label
 $label2.Location = New-Object System.Drawing.Point(10,20)
 #$label2.Size = New-Object System.Drawing.Size(280,20)
 $Label2.AutoSize = $True
-
 
 
 
